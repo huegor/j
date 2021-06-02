@@ -1,0 +1,68 @@
+/* structures the display of elements on page */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $fontStack;
+  color: $color;
+  letter-spacing: $letterSpacing;
+  text-transform: lowercase;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  display:flex;
+  justify-content: space-between;
+}
+.flexBaseline {
+  align-items: baseline;
+}
+.flexVHcenter {
+  justify-content: center;
+  align-items: center;
+}
+.flexEnd {
+  justify-content: flex-end;
+}
+
+.relative {
+  position:relative;
+}
+.absolute {
+  position:absolute;
+}
+
+.widthFull {
+  width:100%;
+}
+.widthTwothirds{
+  width: $widthThird*2;
+  @include mobile {
+    width:100%;
+  }
+}
+.widthTwothirdsMax{
+  max-width: $widthThird*2;
+  @include mobile {
+    max-width:100%;
+  }
+}
+.widthHalf {
+  width: $widthHalf;
+  @include mobile {
+    width:100%;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.none {
+  display: none;
+}
+.mobileHide {
+  @include mobile {
+    display: none;
+  }
+}

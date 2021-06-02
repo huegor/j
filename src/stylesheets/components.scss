@@ -1,0 +1,267 @@
+/* individual components that make up page. break up into scss partials */
+
+.space {
+  height: $space;
+}
+
+.italic {
+  font-style: italic;
+}
+
+h1, h2 {
+  margin: 0;
+  padding:0;
+  font-weight: normal;
+  font-size: $fontSizeBig;
+  @include mobile {
+    font-size: $fontSize;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $color;
+  transition: $transition;
+  &:hover, &:active {
+    color: $colorLight;
+  }
+}
+
+button {
+  border: none;
+  width: $gap*2;
+  font-family: $fontStack;
+  font-size: $fontSize*.75;
+  color: #fff;
+  text-transform: lowercase;
+  transition: $transition;
+  cursor: pointer;
+  &:hover {
+    opacity: .7;
+  }
+  @include mobile {
+    width: $heightButton;
+    min-height: $space;
+    margin-top: $spaceHalf;
+  }
+}
+
+
+nav {
+  padding: $spaceHalf 10% 2vh 10%;
+  position:fixed;
+  width:$width;
+  background-color: white;
+  z-index: 1;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  display:inline;
+  margin-right:$gap;
+  @include mobile {
+    margin-right:$gap*2;
+  }
+}
+li:last-child {
+  margin-right: 0;
+}
+
+footer {
+  color: $colorLight;
+  background-color: #fff;
+}
+
+//main content
+div.main {
+  width:$width;
+  margin:auto;
+  font-size: $fontSize;
+  @include mobile {
+    font-size: $fontSizeMobile;
+  }
+}
+.main {
+  a {
+    text-decoration: underline;
+  }
+}
+
+.cursorNone {
+  cursor: none;
+}
+
+// .imgHover {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   left: 0;
+//   bottom: 0;
+//   // object-fit: contain;
+//   opacity: 0;
+//   transition: $transition;
+//   &:hover {
+//     opacity: 1;
+//   }
+// }
+
+// .flexItemTxt{
+//   top: $space*6;
+// }
+
+.heightButton {
+  height: $heightButton;
+}
+.path {
+  right:0;
+  z-index: -1;
+  object-fit: fill;
+  height: 112%;
+}
+.swatch {
+  @include mobile {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    img {
+      order: -1;
+      object-fit: contain;
+    }
+  }
+}
+.vaquero {
+  .swatch {
+    button {
+      &:first-child {
+        background-color: #C5B551;
+      }
+      &:nth-child(2){
+        background-color: #424041;
+      }
+      &:nth-child(4){
+        background-color: #1B3D77;
+      }
+      &:nth-child(5){
+        background-color: #0B1417;
+      }
+    }
+  }
+  // .path {
+  //   height: 112%;
+  // }
+}
+.blanket {
+  .swatch {
+    button {
+      &:first-child {
+        background-color: #5b5b47;
+      }
+      &:nth-child(2){
+        background-color: #3e4c52;
+      }
+      &:nth-child(4){
+        background-color: #bbb8b1;
+      }
+      &:nth-child(5){
+        background-color: #341610;
+      }
+    }
+  }
+}
+.iggy {
+  .swatch {
+    button {
+      &:first-child {
+        background-color: #5D8393;
+      }
+      &:nth-child(2){
+        background-color: #12161E;
+      }
+      &:nth-child(4){
+        background-color: #B49596;
+      }
+      &:nth-child(5){
+        background-color: #446798;
+      }
+    }
+  }
+}
+.christmas {
+  .swatch {
+    button {
+      &:first-child {
+        background-color: #54755B;
+      }
+      &:nth-child(2){
+        background-color: #132813;
+      }
+      &:nth-child(4){
+        background-color: #62363B;
+      }
+      &:nth-child(5){
+        background-color: #381C22;
+      }
+    }
+  }
+}
+.seeds {
+  .swatch {
+    button {
+      &:first-child {
+        background-color: #776143;
+      }
+      &:nth-child(2){
+        background-color: #1A100F;
+      }
+      &:nth-child(4){
+        background-color: #7A6C51;
+      }
+      &:nth-child(5){
+        background-color: #433828;
+      }
+    }
+  }
+}
+
+
+//home pg
+#bg {
+  width:100%;
+  // @include mobile {
+  //   transform: rotate(90deg);
+  //   display: none;
+  // }
+}
+
+#vaquero {
+  width: 6%;
+  top: 10%;
+  right:17%;
+}
+
+#blanket{
+  width: 25%;
+  bottom:10%;
+  right:20%;
+}
+
+#iggy {
+  width: 29%;
+  bottom: 0;
+  left: 23%;
+}
+
+#christmas{
+  width:20%;
+  top:1%;
+  left:26%;
+}
+
+#seeds {
+  width:19%;
+  top:24%;
+  left:0;
+}

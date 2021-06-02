@@ -1,0 +1,32 @@
+/* foundational variables on which site styles will be built */
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&display=swap');
+
+$breakpoint: 1090px;
+@mixin mobile {
+  @media(max-width:#{$breakpoint}){
+    @content;
+  }
+}
+
+$color: #707070;
+$colorLight: lighten($color, 25%);
+
+$fontStack: Crimson Text, serif;
+$fontSize: 1.3em;
+$fontSizeBig: 1.6em;
+$fontSizeMobile: 1em;
+$fontSizeSmall: .65em;
+$letterSpacing: 0.03em;
+
+$width:80%;
+$gap: 7%;
+$widthThird: 33.3%;
+$widthHalf: $width/2;
+
+$space: 10vh;
+$spaceHalf: $space/2;
+$heightImg: 50vh;
+$heightButton: $space*3;
+
+$transition: .3s ease;
